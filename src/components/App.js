@@ -8,19 +8,21 @@ import PrivateRoute from './PrivateRoute'
 
 export default function App() {
   return (
-    <div>
-      <div className="navbar">
+    <>
+      <div>
+        <div className="navbar">
 
+        </div>
+        <AuthProvider>
+          <Router>
+            <Switch>
+              <PrivateRoute exact path="/" component={Dashboard} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+            </Switch>
+          </Router>
+        </AuthProvider>
       </div>
-      <AuthProvider>
-        <Router>
-          <Switch>
-            <PrivateRoute exact path="/" component={Dashboard} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/login" component={Login} />
-          </Switch>
-        </Router>
-      </AuthProvider>
-    </div>
+    </>
   )
 }

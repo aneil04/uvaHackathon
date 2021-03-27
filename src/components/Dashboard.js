@@ -7,6 +7,7 @@ import 'firebase/firestore'
 export default function Dashboard() {
     const { currentUser, logout } = useAuth()
     const history = useHistory()
+    const [error, setError] = useState('')
 
     function validateUserInfo() {
         let userInfoRef = firebase.firestore().collection("/userInformation")
@@ -64,7 +65,7 @@ export default function Dashboard() {
 
     return (
         <>
-            <button onClick={createNewTask}>Log Out</button>
+            <button onClick={handleLogout}>Log Out</button>
         </>
     )
 }

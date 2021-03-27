@@ -10,11 +10,6 @@ export default function App() {
   return (
     <>
       <div>
-        <div className="navbar">
-          <div>
-            
-          </div>
-        </div>
         <AuthProvider>
           <Router>
             <Switch>

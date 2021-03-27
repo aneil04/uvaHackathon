@@ -1,0 +1,44 @@
+.task {
+    padding: 15px;
+    background-color: rgb(252, 253, 253);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.taskInfo {
+    padding: 0px 0px 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.userInfo {
+
+}
+
+.taskStats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.taskStat {
+    margin-left: 10px;
+}
+
+.taskStatBtn {
+    background-color: rgb(0, 132, 255);
+    border: none;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: white;
+    font-weight: 400;
+}
+

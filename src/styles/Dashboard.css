@@ -1,0 +1,33 @@
+.dashboardNav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(245, 245, 245);
+}
+
+.dashboardNavLink {
+    font-size: medium;
+    padding: 10px;
+    height: 100%;
+}
+
+.dashboardSectionHead {
+    padding: 10px;
+    background-color: rgb(229, 239, 248);
+}
+
+.h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.taskContainer {
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.createNewTaskBtn {
+    
+}

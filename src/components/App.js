@@ -11,7 +11,9 @@ export default function App() {
     <>
       <div>
         <div className="navbar">
-
+          <div>
+            
+          </div>
         </div>
         <AuthProvider>
           <Router>

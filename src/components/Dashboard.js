@@ -21,7 +21,7 @@ export default function Dashboard() {
             }
         })
     }
-
+    //this is a test
     // function getTasks() {
     //     let tasksRef = firebase.firestore().collection("/tasks");
     //     tasksRef.where("finished", "==", false).get().then(querySnapshot => {

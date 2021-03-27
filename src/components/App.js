@@ -5,13 +5,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
-import ForgotPassword from './ForgotPassword'
-import UpdateProfile from './UpdateProfile'
-import MyTasks from './MyTasks'
-import '../styles/Main.css'
-import '../styles/Dashboard.css'
-import '../styles/Navbar.css'
-import '../styles/Task.css'
 
 export default function App() {
   return (

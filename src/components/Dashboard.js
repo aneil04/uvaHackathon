@@ -9,36 +9,6 @@ export default function Dashboard() {
     const history = useHistory()
     const [error, setError] = useState('')
 
-    function validateUserInfo() {
-        let userInfoRef = firebase.firestore().collection("/userInformation")
-        userInfoRef.doc(currentUser.uid).get().then((doc) => {
-            if (!doc.exists) {
-                userInfoRef.doc(currentUser.uid).set({
-                    balance: 0
-                }).then(() => {
-                }).catch((error) => {
-                    console.log(error)
-                })
-            }
-        })
-    }
-    //this is a test
-    // function getTasks() {
-    //     let tasksRef = firebase.firestore().collection("/tasks");
-    //     tasksRef.where("finished", "==", false).get().then(querySnapshot => {
-    //         const tempDoc = []
-    //         querySnapshot.forEach((doc) => {
-    //             tempDoc.push({ ...doc.data() })
-    //         });
-    //         setTasks(tempDoc)
-    //     })
-    // }
-
-    useEffect(() => {
-        // getTasks()
-        validateUserInfo()
-    }, []);
-
     async function handleLogout() {
         setError('')
 
@@ -50,19 +20,7 @@ export default function Dashboard() {
             alert('uhhhh')
         }
     }
-
-    // function createNewTask() {
-    //     setNewTaskEnabled(true)
-    // }
-
-    // function handleMyTask() {
-    //     try {
-    //         history.push(`/my-tasks/${currentUser.uid}`)
-    //     } catch {
-    //         alert('uhhh')
-    //     }
-    // }
-
+    
     return (
         <>
             <button onClick={handleLogout}>Log Out</button>

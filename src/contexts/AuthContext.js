@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { auth, database } from '../firebase'
-import firebase from 'firebase/app'
+import { auth } from '../firebase'
 import 'firebase/firestore'
 
 const AuthContext = React.createContext()
@@ -13,12 +12,6 @@ export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
-    function getStuff() {
-        database.collection('test').doc('object1').get().then(doc => {
-            console.log(doc)
-        })
-    }
-
     function signup(email, password) {
         return auth.createUserWithEmailAndPassword(email, password)
     }
@@ -29,18 +22,6 @@ export function AuthProvider({ children }) {
 
     function logout() {
         return auth.signOut()
-    }
-
-    function resetPassword(email) {
-        return auth.sendPasswordResetEmail(email)
-    }
-
-    function updateEmail(email) {
-        return currentUser.updateEmail(email)
-    }
-
-    function updatePassword(password) {
-        return currentUser.updatePassword(password)
     }
 
     useEffect(() => {
@@ -56,11 +37,7 @@ export function AuthProvider({ children }) {
         currentUser,
         signup,
         login,
-        logout,
-        resetPassword,
-        updateEmail,
-        updatePassword,
-        getStuff
+        logout
     }
 
     return (

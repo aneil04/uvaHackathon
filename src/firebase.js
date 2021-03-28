@@ -1,18 +1,16 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
-import 'firebase/storage'
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyDjEEVdxV1JCVoHLtxz43aqccYTZx0Ast0",
-    authDomain: "uva-hackathon.firebaseapp.com",
-    projectId: "uva-hackathon",
-    storageBucket: "uva-hackathon.appspot.com",
-    messagingSenderId: "460907383800",
-    appId: "1:460907383800:web:cc46ff108a44f0b608e40d"
+    apiKey: "AIzaSyC9TWMGNKXlFJqvSPuLgs1kR_NlGbhS1NY",
+    authDomain: "uva-hackathon-app.firebaseapp.com",
+    projectId: "uva-hackathon-app",
+    storageBucket: "uva-hackathon-app.appspot.com",
+    messagingSenderId: "168993876799",
+    appId: "1:168993876799:web:c9e2504827775bc761418a"
+});
 
-})
-
-export const database = app.firestore()
+// Initialize Firebase
 export const auth = app.auth()
-export default app
+export default firebase

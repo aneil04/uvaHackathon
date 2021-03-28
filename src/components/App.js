@@ -18,6 +18,7 @@ import Login from './Login'
 import PrivateRoute from './PrivateRoute'
 import GiveHelp from './GiveHelp'
 import GetHelp from './GetHelp'
+import homepage from './homepage'
 
 export default function App() {
 
@@ -25,9 +26,10 @@ export default function App() {
     <div>
         <nav class="navbar navbar-dark bg-primary">
           <div class= "container-fluid ">
-                <Button class="navbar-brand" href="/help">Help</Button>
+                <Button class="navbar-brand" href="/home">Home</Button>
+                <Button class="navbar-brand" href="/givehelp">Give Help</Button>
                 <Button class="navbar-brand" href="/gethelp">Get Help</Button>
-                <Button class="navbar-brand" href="/logout">Login</Button>
+                <Button class="navbar-brand" href="/login">Login</Button>
                 <Button class="navbar-brand" href="/logout">Logout</Button>
                 <Button class="navbar-brand" href="/signup">Sign up</Button>
             </div>
@@ -38,8 +40,9 @@ export default function App() {
             <PrivateRoute exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
-            <Route path="/giveHelp" component={GetHelp} />
-            <Route path="/getHelp" component={GiveHelp} />
+            <Route path="/getHelp" component={GetHelp} />
+            <Route path="/giveHelp" component={GiveHelp} />
+            <Route path ="/home" component={homepage} />
           </Switch>
         </Router>
       </AuthProvider>

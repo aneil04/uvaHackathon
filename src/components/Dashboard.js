@@ -61,7 +61,6 @@ export default function Dashboard() {
     let index = 0;
     return (
         <>
-
             {!loading && userData.map(user => {
                 return (
                     <div>

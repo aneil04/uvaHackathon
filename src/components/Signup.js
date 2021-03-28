@@ -52,7 +52,7 @@ export default function Signup() {
                     studentsTaught: 0,
                     ratings: [],
                     numRatings: [],
-                    
+                    reviews: []
                 }
                 ref.add(docData).then(() => {
                     console.log("document added to mentor db")
@@ -99,17 +99,15 @@ export default function Signup() {
                             <label>Password Confirm</label>
                             <input type="password" ref={passwordConfirmRef}></input>
                         </div>
-                        <h2>Sign up as student:</h2>
                         <div>
                             <div>
                                 <label>Grade Level</label>
                                 <input type="number" ref={studentGrade}></input>
                             </div>
                         </div>
-                        <h2>Sign up as mentor:</h2>
                         <div>
                             <div>
-                                <h3>Subjects you teach:</h3>
+                                <h3>Subjects you can teach:</h3>
                                 <input ref={mentorSubjects} type="text" placeholder="math, science, etc."></input>
                             </div>
                             <div>

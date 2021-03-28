@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "public",
+    "site": "uva-hackathon-app",
+    "public": "build",
     "ignore": [
       "firebase.json",
       "**/.*",

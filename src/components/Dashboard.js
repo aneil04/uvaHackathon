@@ -70,11 +70,12 @@ export default function Dashboard() {
                 })
             })
         })
-
     }
+
     let index = -1;
     return (
         <>
+            <button onClick={toggleHelp}>{helpStatus ? "Get Help":"Give Help"}</button>
             {!loading && userData.map(user => {
                 index++;
                 return (

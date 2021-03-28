@@ -35,12 +35,15 @@ export default function Signup() {
                 name: personName.current.value,
                 description: mentorDescription.current.value,
                 subjects: mentorSubjects.current.value.split(", "),
+                email: emailRef.current.value,
                 hours: 0,
                 studentsTaught: 0,
                 rating: -1,
                 numRatings: 0,
                 reviews: [],
-                grade: 0
+                grade: 0,
+                status: false
+                // false means getting help, true means giving help
             }
             ref.add(docData).then(() => {
                 console.log("created user")

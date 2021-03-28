@@ -36,11 +36,9 @@ export default function App() {
     <div>
         <nav class="navbar navbar-dark bg-primary">
           <div class= "container-fluid ">
-                <Button class="btn btn-info" href="/home">Home</Button>
                 <Button class="btn btn-info" href="/login">Login</Button>
                 <Button class="navbar-brand" href="/logout">Logout</Button>
                 <Button class="navbar-brand" href="/signup">Sign up</Button>
-                <Button class="navbar-brand" href="#">Edit Profile</Button>
             </div>
             </nav>
       <AuthProvider>

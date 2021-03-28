@@ -21,7 +21,6 @@ import GetHelp from './GetHelp'
 import homepage from './homepage'
 
 export default function App() {
-
   return (
     <div>
         <nav class="navbar navbar-dark bg-primary">

@@ -29,7 +29,7 @@ export default function Login() {
 
     return (
 
-        <div class="container-fluid">
+        <div className="container-fluid">
                 <div>
                     <h1>Log In to the App</h1>
                     {error && <div>{error}</div>}

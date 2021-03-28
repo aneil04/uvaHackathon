@@ -31,7 +31,7 @@ export default function Signup() {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            const ref = firebase.firestore().collection("users")
+            const ref = firebase.firestore().collection("newUsers")
             const docData = {
                 docID: uuidv4(),
                 name: personName.current.value,

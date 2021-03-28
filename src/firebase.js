@@ -8,7 +8,8 @@ const app = firebase.initializeApp({
     projectId: "uva-hackathon-app",
     storageBucket: "uva-hackathon-app.appspot.com",
     messagingSenderId: "168993876799",
-    appId: "1:168993876799:web:c9e2504827775bc761418a"
+    appId: "1:168993876799:web:c9e2504827775bc761418a",
+    measurementId: "G-7BGT2SJS44"
 });
 
 // Initialize Firebase

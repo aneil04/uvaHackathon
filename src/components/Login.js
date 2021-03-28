@@ -1,6 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import "../styles/styles.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
 export default function Login() {
     const emailRef = useRef()
@@ -24,7 +28,8 @@ export default function Login() {
     }
 
     return (
-        <>
+
+        <Container>
             <section className="container" style={{ minHeight: "100vh" }}>
                 <div className="card">
                     <h1>Log In to the App</h1>
@@ -38,7 +43,7 @@ export default function Login() {
                             <label className="label">Password</label>
                             <input type="password" ref={passwordRef} className="form-input"></input>
                         </div>
-                        <button disabled={loading} type="submit" className="btn">Sign In</button>
+                        <Button disabled={loading} type="submit" className="btn btn-success">Sign In</Button>
                     </form>
                     <div id="forgot-pass-txt">
                         <Link to="/forgot-password">Forgot password?</Link>
@@ -49,6 +54,6 @@ export default function Login() {
                     <Link to="/signup"> Sign up</Link>
                 </div>
             </section>
-        </>
+        </Container>
     )
 }

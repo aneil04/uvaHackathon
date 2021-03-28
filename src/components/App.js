@@ -9,6 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import firebase from '../firebase'
 
+
 import Signup from './Signup'
 import { AuthProvider } from '../contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
@@ -33,17 +34,17 @@ export default function App() {
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <Container>
-          <a class="navbar-brand" href="/home">Home</a>
-          <a class="navbar-brand" onClick={giveHelp} href="#">Give Help</a>
-          <a class="navbar-brand" href="#">Get Help</a>
-          <a class="navbar-brand" href="/login">Login</a>
-          <a class="navbar-brand" href="/logout">Logout</a>
-          <a class="navbar-brand" href="/signup">Sign up</a>
-          <a class="navbar-brand" href="#">Edit Profile</a>
-        </Container>
-      </nav>
+        <nav class="navbar navbar-dark bg-primary">
+            <Container>
+                <Button class="btn btn-info" href="/home">Home</Button>
+                <Button class="btn btn-info" href="#">Give Help</Button>
+                <Button class="btn btn-info" href="#">Get Help</Button>
+                <Button class="btn btn-info" href="/login">Login</Button>
+                <Button class="navbar-brand" href="/logout">Logout</Button>
+                <Button class="navbar-brand" href="/signup">Sign up</Button>
+                <Button class="navbar-brand" href="#">Edit Profile</Button>
+            </Container>
+            </nav>
       <AuthProvider>
         <Router>
           <Switch>

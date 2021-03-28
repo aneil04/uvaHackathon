@@ -3,6 +3,8 @@ import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { v4 as uuidv4 } from 'uuid';
 import firebase from '../firebase'
+import "../styles/styles.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Signup() {
     const emailRef = useRef()

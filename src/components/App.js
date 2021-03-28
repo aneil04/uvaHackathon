@@ -16,21 +16,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
+import GiveHelp from './GiveHelp'
+import GetHelp from './GetHelp'
 
 export default function App() {
-
-  function giveHelp() {
-    // if (currentUser.uid !== undefined) {
-    //   const ref = firebase.firestore().collection("users")
-    //   ref.where("email", "==", currentUser.email).get().then((doc) => {
-    //     console.log(doc.data)
-    //   })
-    // }
-  }
-
-  function getHelp() {
-
-  }
 
   return (
     <div>
@@ -49,6 +38,8 @@ export default function App() {
             <PrivateRoute exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
+            <Route path="/giveHelp" component={GetHelp} />
+            <Route path="/getHelp" component={GiveHelp} />
           </Switch>
         </Router>
       </AuthProvider>

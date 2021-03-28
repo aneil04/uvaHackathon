@@ -29,18 +29,17 @@ export default function Login() {
 
     return (
 
-        <Container>
-            <section className="container" style={{ minHeight: "100vh" }}>
-                <div className="card">
+        <div class="container-fluid">
+                <div>
                     <h1>Log In to the App</h1>
                     {error && <div>{error}</div>}
                     <form onSubmit={handleSubmit}>
                         <div className="input-container">
-                            <label className="label">Email</label>
+                            <label className="label">Email:</label>
                             <input type="email" ref={emailRef} className="form-input"></input>
                         </div>
                         <div className="input-container">
-                            <label className="label">Password</label>
+                            <label className="label">Password:</label>
                             <input type="password" ref={passwordRef} className="form-input"></input>
                         </div>
                         <Button disabled={loading} type="submit" className="btn btn-success">Sign In</Button>
@@ -53,7 +52,6 @@ export default function Login() {
                     Need an account?
                     <Link to="/signup"> Sign up</Link>
                 </div>
-            </section>
-        </Container>
+            </div>
     )
 }

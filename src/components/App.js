@@ -24,13 +24,11 @@ export default function App() {
   return (
     <div>
         <nav class="navbar navbar-dark bg-primary">
-            <Container>
-                <Button class="btn btn-info" href="/home">Home</Button>
+          <div class= "container-fluid ">
                 <Button class="btn btn-info" href="/login">Login</Button>
                 <Button class="navbar-brand" href="/logout">Logout</Button>
                 <Button class="navbar-brand" href="/signup">Sign up</Button>
-                <Button class="navbar-brand" href="#">Edit Profile</Button>
-            </Container>
+            </div>
             </nav>
       <AuthProvider>
         <Router>

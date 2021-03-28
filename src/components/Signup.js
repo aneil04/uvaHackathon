@@ -97,13 +97,14 @@ export default function Signup() {
                             </div>
                         </div>
                         <div>
-                            <button disabled={loading} type="submit">Sign Up</button>
+                            <button disabled={loading} type="submit" className = "btn btn-success">Sign Up</button>
                         </div>
                     </form>
                 </div>
                 <div>
                     <div>Have an account?</div>
-                    <Link to="/login">Log In</Link>
+
+                    <Link to="/login" className="btn btn-info">Log In</Link>
                 </div>
             </section>
         </>

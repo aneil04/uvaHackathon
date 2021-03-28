@@ -5,6 +5,14 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import UserCard from './UserCard'
 import { v4 as uuidv4 } from 'uuid';
+import "../styles/styles.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+
 
 export default function Dashboard() {
     const { currentUser, logout } = useAuth()
@@ -53,6 +61,7 @@ export default function Dashboard() {
     let index = 0;
     return (
         <>
+
             {!loading && userData.map(user => {
                 return (
                     <div>
@@ -63,7 +72,7 @@ export default function Dashboard() {
                     </div>
                 )
             })}
-            <button onClick={handleLogout}>Log Out</button>
+            <button onClick={handleLogout} class="btn btn-danger">Log Out</button>
         </>
     )
 }

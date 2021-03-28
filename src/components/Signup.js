@@ -40,7 +40,7 @@ export default function Signup() {
                 email: emailRef.current.value,
                 hours: 0,
                 studentsTaught: 0,
-                rating: -1,
+                rating: 0,
                 numRatings: 0,
                 reviews: [],
                 grade: 0,

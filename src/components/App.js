@@ -37,8 +37,6 @@ export default function App() {
         <nav class="navbar navbar-dark bg-primary">
             <Container>
                 <Button class="btn btn-info" href="/home">Home</Button>
-                <Button class="btn btn-info" href="#">Give Help</Button>
-                <Button class="btn btn-info" href="#">Get Help</Button>
                 <Button class="btn btn-info" href="/login">Login</Button>
                 <Button class="navbar-brand" href="/logout">Logout</Button>
                 <Button class="navbar-brand" href="/signup">Sign up</Button>

@@ -50,7 +50,7 @@ export default function Login() {
                 </div>
                 <div id="signup_text">
                     Need an account?
-                    <a class="btn btn-secondary" href="/signup" role="button">Sign Up</a>
+                    <a class="btn btn-info" href="/signup" role="button">Sign Up</a>
                 </div>
             </div>
     )

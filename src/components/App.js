@@ -16,28 +16,23 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './Dashboard'
 import Login from './Login'
 import PrivateRoute from './PrivateRoute'
-import GiveHelp from './GiveHelp'
-import GetHelp from './GetHelp'
 
 export default function App() {
-
   return (
     <div>
-        <nav class="navbar navbar-dark bg-primary">
-          <div class= "container-fluid ">
-                <Button class="btn btn-info" href="/login">Login</Button>
-                <Button class="navbar-brand" href="/logout">Logout</Button>
-                <Button class="navbar-brand" href="/signup">Sign up</Button>
-            </div>
-            </nav>
+      <nav className="navbar navbar-dark bg-primary">
+        <div className="container-fluid ">
+          <Button className="btn btn-info" href="/login">Login</Button>
+          <Button className="navbar-brand" href="/logout">Logout</Button>
+          <Button className="navbar-brand" href="/signup">Sign up</Button>
+        </div>
+      </nav>
       <AuthProvider>
         <Router>
           <Switch>
             <PrivateRoute exact path="/" component={Dashboard} />
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
-            <Route path="/giveHelp" component={GetHelp} />
-            <Route path="/getHelp" component={GiveHelp} />
           </Switch>
         </Router>
       </AuthProvider>

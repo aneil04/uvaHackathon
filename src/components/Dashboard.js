@@ -31,7 +31,7 @@ export default function Dashboard() {
 
     //only for one subject
     function getUserData(subject, index) {
-        const ref = firebase.firestore().collection("users")
+        const ref = firebase.firestore().collection("newUsers")
         ref.where('subjects', 'array-contains', subject).where("status", "==", true).get().then((querySnapshot) => {
             const items = []
             querySnapshot.forEach((doc) => {
@@ -50,7 +50,7 @@ export default function Dashboard() {
     }
 
     useEffect(() => {
-        const ref = firebase.firestore().collection("users")
+        const ref = firebase.firestore().collection("newUsers")
         ref.where("email", "==", currentUser.email).get().then((querySnapshot) => {
             querySnapshot.forEach(doc => {
                 setHelpStatus(doc.data().status)
@@ -60,13 +60,14 @@ export default function Dashboard() {
     }, [])
 
     function toggleHelp() {
-        const ref = firebase.firestore().collection("users")
+        const ref = firebase.firestore().collection("newUsers")
         ref.where("email", "==", currentUser.email).get().then((querySnapshot) => {
             querySnapshot.forEach(doc => {
                 doc.ref.update({
                     status: !helpStatus
                 }).then(() => {
-                    setHelpStatus(!helpStatus)
+                    const temp = !helpStatus
+                    setHelpStatus(temp)
                 })
             })
         })
@@ -75,28 +76,29 @@ export default function Dashboard() {
     let index = -1;
     return (
         <>
-            <button onClick={toggleHelp}>{helpStatus ? "Get Help":"Give Help"}</button>
-            {!loading && userData.map(user => {
-                index++;
-                return (
-                    <div>
-                        <h3>{topSubjects[index]}</h3>
-                        {/* ^^^^HIDE THAT */}
-                        <Subject key={uuidv4()} users={user}></Subject>
-                    </div>
-                )
-            })}
-            <button onClick={handleLogout} class="btn btn-danger">Log Out</button>
-        </>
-    )
-}
+            <div className="dashboard-container">
+                <div className="head-container">
+                    <h1>Dashboard</h1>
+                </div>
+                <button onClick={toggleHelp} className="custom-btn">{helpStatus ? "Get Help" : "Give Help"}</button>
+                {!loading && userData.map(user => {
+                    index++;
+                    return (
+                        <div className="tasks-container">
+                            <div className="head-container">
+                                <h3>{topSubjects[index]}</h3>
+                            </div>
+                            <div className="users-container">
+                                {user && user.map(_user => {
+                                    return <UserCard key={uuidv4()} userData={_user}></UserCard>
+                                })}
+                            </div>
+                        </div>
+                    )
+                })}
+                <button onClick={handleLogout} className="btn btn-danger">Log Out</button>
+            </div>
 
-function Subject({ users }) {
-    return (
-        <div>
-            {users && users.map(user => {
-                return <UserCard key={uuidv4()} userData={user}></UserCard>
-            })}
-        </div>
+        </>
     )
 }

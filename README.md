@@ -1,4 +1,4 @@
-#UVA Hackathon Project
+UVA Hackathon Project
 
 This project was submitted to HooHacks. It links mentors to students who need help in certain subjects. To start, create an account and log in (Google Firebase and Firebase authentication authenticates and stores user information) as a teacher or student.
 
